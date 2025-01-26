@@ -385,22 +385,3 @@ def run(power_plants: list[PowerPlant], total_energy: float
                 # print(global_best_position)
 
     return global_best_position, global_best_score
-
-# Example Usage
-if __name__ == "__main__":
-    total_energy = 910  # Total energy demand in MWh
-
-    # Define power plants
-    power_plants = [
-        PowerPlant("a", "a", pmin=100, pmax=460, fuel_cost=13.4, efficiency=0.53, co2_cost=20, wind_percentage=0),  # Gas plant
-        PowerPlant("a", "a", pmin=100, pmax=460, fuel_cost=13.4, efficiency=0.53, co2_cost=20, wind_percentage=0), 
-        PowerPlant("a", "a", pmin=40, pmax=210, fuel_cost=13.4, efficiency=0.37, co2_cost=20, wind_percentage=0), 
-        PowerPlant("a", "a", pmin=0, pmax=16, fuel_cost=50.8, efficiency=0.3, co2_cost=0, wind_percentage=0), 
-        PowerPlant("a", "a", pmin=0, pmax=150*0.6, fuel_cost=0, efficiency=1, co2_cost=0, wind_percentage=0.6), 
-        PowerPlant("a", "a", pmin=0, pmax=36*0.6, fuel_cost=0, efficiency=1, co2_cost=0, wind_percentage=0.6),  # Wind plant
-    ]
-
-    # Run PSO
-    best_solution, best_cost = run(power_plants, total_energy)
-    print("Optimal Production:", best_solution)
-    print("Optimal Cost:", best_cost)
