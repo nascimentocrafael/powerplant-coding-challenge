@@ -30,24 +30,24 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-   git https://github.com/nascimentocrafael/powerplant-coding-challenge
-   cd powerplant-coding-challenge/src
+git clone https://github.com/nascimentocrafael/powerplant-coding-challenge
+cd powerplant-coding-challenge/src
 ```
 
 2. Create a virtual environment:
 ```bash
-    python3 -m venv ../env/powerplants
-    source ../env/bin/powerplants   # On Windows use `..\env\powerplants\Scripts\activate`
+python3 -m venv ../env/powerplants
+..\env\powerplants\Scripts\activate # On Windows
 ```
 
 3. Install the required dependencies:
 ```bash
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 4. Start the Flask server:
 ```bash
-    python app.py
+python api.py
 ```
 
 5. The application will be running at http://127.0.0.1:8888/.
@@ -59,7 +59,7 @@ To run this project locally, follow these steps:
 - random: For random number generation (used in PSO for velocity and position updates).
 
 ## API Documentation
-[/](http://127.0.0.1:8888/) (POST)
+/ (http://127.0.0.1:8888/) (POST)
 
 This endpoint optimizes the energy allocation for a set of power plants based on the requested energy load.
 
